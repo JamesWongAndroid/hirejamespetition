@@ -23,6 +23,7 @@
           <dbTableFile dbTableName="PetitionList"/>
         </dbTableDirectory>
         <modelFile modelName="PetitionList"/>
+        <modelFile modelName="PetitionListMapper"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
