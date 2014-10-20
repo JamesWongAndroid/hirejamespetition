@@ -23,10 +23,14 @@ class Application_Form_Petitionform extends Zend_Form
         $this->addElement('text', 'location', array(
         	'label'		=> 'Your Location'));
 
-        $this->addElement('textarea', 'message', array(
-        	'label'		=> 'Your Message: ',
-        	'width'		=> '10',
-        	'height'	=> '10'));
+        $body = new Zend_Form_Element_Textarea('message');
+        $body->setLabel('Your Message:')
+            ->setRequired(true)
+            ->setAttrib('cols', '40')
+            ->setAttrib('rows', '4');
+        $this->addElement($body);
+
+       
 
         // Add the submit button
         $this->addElement('submit', 'submit', array(
