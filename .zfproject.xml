@@ -22,6 +22,7 @@
         <dbTableDirectory>
           <dbTableFile dbTableName="PetitionList"/>
         </dbTableDirectory>
+        <modelFile modelName="PetitionList"/>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <servicesDirectory enabled="false"/>
