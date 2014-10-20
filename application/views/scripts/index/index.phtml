@@ -9,15 +9,39 @@
     	$this->form->setAction($this->url());
     	echo $this->form;
 
-    	//using a normal constructor
-$db = new Zend_Db_Adapter_Pdo_Mysql(array(
-    'host'     => 'localhost',
-    'username' => 'root',
-    'password' => 'root',
-    'dbname'   => 'zf_framework_db'
-));
+// Define connection variables
+$DBServer = "localhost";  // server name or IP address
+$DBUser = "root";
+$DBPass = "root";
+$DBName = "zf_framework_db";
 
-	$tables = $db->listTables();
-	echo $this->$tables;
+// Create connection
+$con = new mysqli($DBServer, $DBUser, $DBPass, $DBName);
+
+// Check connection
+if ($conn->connect_error) {
+    echo "Database connection failed: " . $con->connect_error, E_USER_ERROR;
+}
+
+$result = mysqli_query($con,"SELECT * FROM petition_list");
+
+echo "<table border='1'>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result)) {
+  echo "<tr>";
+  echo "<td>" . $row['email'] . "</td>";
+  echo "<td>" . $row['message'] . "</td>";
+  echo "</tr>";
+}
+
+echo "</table>";
+
+mysqli_close($con);
+
+
     ?>
 
