@@ -25,7 +25,7 @@ class Application_Model_PetitionListMapper
         return $this->_dbTable;
     }
 
-    public function save(Application_Model_DbTable_PetitionList $petitionlist)
+    public function save(Application_Model_PetitionList $petitionlist)
     {
     	$data = array(
     		'first_name' => $petitionlist->getFirst_Name(),

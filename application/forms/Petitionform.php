@@ -26,7 +26,7 @@ class Application_Form_Petitionform extends Zend_Form
         $this->addElement('textarea', 'message', array(
         	'label'		=> 'Your Message: ',
         	'width'		=> '150',
-        	'height'	=> '100'));
+        	'height'	=> '50'));
 
         // Add the submit button
         $this->addElement('submit', 'submit', array(

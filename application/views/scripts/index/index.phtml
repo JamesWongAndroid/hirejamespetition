@@ -4,3 +4,20 @@
     <p>So please, show your support! Sign this petition, and show TapFury that they will make the right choice by hiring our special star, James Wong!
     Just fill out your name, your email, your location, and a short message stating how wonderful James Wong really is. Thank you! 
     </p>
+
+    <?php
+    	$this->form->setAction($this->url());
+    	echo $this->form;
+
+    	//using a normal constructor
+$db = new Zend_Db_Adapter_Pdo_Mysql(array(
+    'host'     => 'localhost',
+    'username' => 'root',
+    'password' => 'root',
+    'dbname'   => 'zf_framework_db'
+));
+
+	$tables = $db->listTables();
+	echo $this->$tables;
+    ?>
+
