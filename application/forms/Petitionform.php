@@ -35,6 +35,7 @@ class Application_Form_Petitionform extends Zend_Form
         // Add the submit button
         $this->addElement('submit', 'submit', array(
             'ignore'   => true,
+            'class' => 'btn btn-lg btn-success',
             'label'    => 'Sign Petition',
         ));
 
