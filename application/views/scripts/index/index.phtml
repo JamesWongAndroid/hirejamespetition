@@ -21,6 +21,8 @@ if (mysqli_connect_errno()) {
 
 $result = mysqli_query($con,"SELECT * FROM petition_list");
 
+echo "<h2><br>Signatures</h2>";
+
 echo "<div class=\"row marketing\">";
 while($row = mysqli_fetch_array($result)) {
   
